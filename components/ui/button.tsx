@@ -12,8 +12,7 @@ const buttonVariants = cva(
           "bg-brand-gradient text-slate-900 shadow-md hover:brightness-105",
         outline:
           "border border-slate-300 bg-white/60 hover:bg-white text-slate-900",
-        ghost:
-          "bg-transparent hover:bg-slate-100 text-slate-900",
+        ghost: "bg-transparent hover:bg-slate-100 text-slate-900",
       },
       size: {
         default: "h-10 px-5",
