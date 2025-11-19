@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 255 255 255;
+  --foreground: 15 23 42;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 font-sans;
+}
+
+.section {
+  @apply max-w-6xl mx-auto px-4 py-12 lg:py-16;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-semibold tracking-tight mb-4 text-slate-900;
+}
+
+.section-subtitle {
+  @apply text-sm uppercase tracking-[0.2em] text-brand-blue mb-2;
+}
+
+.card {
+  @apply rounded-2xl border border-slate-200 bg-white/80 shadow-sm backdrop-blur;
+}
