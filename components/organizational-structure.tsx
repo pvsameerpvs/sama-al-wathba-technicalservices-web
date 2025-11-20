@@ -97,10 +97,6 @@ export function OrganizationalStructureGrid({
         </div>
 
         {/* Small note */}
-        <p className="mt-6 text-[11px] text-slate-500 text-center">
-          * Diagram simplified for clarity. Structure can be adjusted based on
-          project size and scope.
-        </p>
       </div>
     </section>
   );
