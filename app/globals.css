@@ -26,3 +26,125 @@ body {
 .card {
   @apply rounded-2xl border border-slate-200 bg-white/80 shadow-sm backdrop-blur;
 }
+
+/* container for MD: vertical line down */
+.org-md-wrapper {
+  position: relative;
+  padding-bottom: 32px;
+}
+.org-md-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 3px;
+  height: 32px;
+  transform: translateX(-50%);
+  background-color: #0054A6; /* brand blue */
+}
+
+/* grid that holds 4 columns + top horizontal line */
+.org-grid-wrapper {
+  position: relative;
+  padding-top: 28px;
+}
+.org-grid-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background-color: #0054A6; /* brand blue */
+}
+
+/* main grid – desktop: 4 columns, mobile: 2 columns */
+.org-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (min-width: 768px) {
+  .org-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* each column – vertical line from top node to children */
+.org-column {
+  position: relative;
+  padding-top: 16px;
+}
+.org-column::before {
+  content: "";
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  width: 3px;
+  height: 28px;
+  transform: translateX(-50%);
+  background-color: #0054A6; /* brand blue */
+}
+
+.org-children {
+  position: relative;
+}
+.org-children::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 3px;
+  height: calc(100% + 12px);
+  transform: translateX(-50%);
+  background-color: #0054A6; /* brand blue */
+}
+
+/* node cards – double card style */
+.org-node {
+  position: relative;
+  width: 140px;
+  max-width: 100%;
+  height: 64px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* small nodes */
+.org-node-small {
+  height: 60px;
+}
+
+/* BACK card – darker blue */
+.org-node-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background-color: #003F7F; /* dark brand blue */
+  opacity: 0.95;
+}
+
+/* FRONT card – white with blue stroke */
+.org-node-front {
+  position: absolute;
+  inset: 0;
+  transform: translate(6px, 6px);
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1.5px solid #0054A6; /* brand border */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4px;
+  font-size: 13px;
+  color: #003F7F; /* readable dark blue */
+  font-weight: 600;
+}
+
+/* responsive tweaks */
+@media (max-width: 480px) {
+  .org-node {
+    width: 120px;
+  }
+}

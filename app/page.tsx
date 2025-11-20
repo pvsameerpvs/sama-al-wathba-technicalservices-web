@@ -1,9 +1,10 @@
 import { HeroSlider } from "@/components/hero-slider";
 import ServicesPage from "./services/page";
 import { WhyChooseUsSection } from "@/components/why-choose-us";
-import { OrganizationalStructure } from "@/components/organizational-structure";
+
 import { ProjectsGrid } from "@/components/projects/projects-grid";
 import { InfoSection } from "@/components/Info-section";
+import { OrganizationalStructureGrid } from "@/components/organizational-structure";
 
 export default function HomePage() {
   const homeFeatures = [
@@ -37,7 +38,7 @@ export default function HomePage() {
       />
       <ServicesPage />
       <WhyChooseUsSection />
-      <OrganizationalStructure />
+      <OrganizationalStructureGrid />
       <ProjectsGrid />
     </>
   );
