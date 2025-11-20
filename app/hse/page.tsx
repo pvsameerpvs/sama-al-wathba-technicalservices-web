@@ -11,10 +11,7 @@ export default function HSEPage() {
   return (
     <>
       {/* HSE main content */}
-      <section
-        className="relative section space-y-10 overflow-hidden 
-       "
-      >
+      <section className="relative section space-y-10 overflow-hidden">
         {/* Background blobs */}
         <div
           className="pointer-events-none absolute -top-24 left-1/2 h-[420px] w-[420px]
@@ -59,7 +56,11 @@ export default function HSEPage() {
             {/* Left column – Objectives as card */}
             <Card className="border-brand-blue/10 bg-white/85 backdrop-blur-sm shadow-sm">
               <CardHeader className="flex flex-row items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-brand-yellow via-brand-green to-brand-blue text-slate-900 shadow">
+                <div
+                  className="flex h-10 w-10 items-center justify-center rounded-full 
+                                bg-gradient-to-br from-[#0054A6] via-[#1E6CCD] to-[#69A3FF] 
+                                text-white shadow"
+                >
                   <ShieldCheck className="h-5 w-5" />
                 </div>
                 <div>
@@ -101,7 +102,11 @@ export default function HSEPage() {
             <div className="space-y-6">
               <Card className="border-brand-blue/10 bg-white/85 backdrop-blur-sm shadow-sm">
                 <CardHeader className="flex flex-row items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-brand-yellow via-brand-green to-brand-blue text-slate-900 shadow">
+                  <div
+                    className="flex h-10 w-10 items-center justify-center rounded-full 
+                                  bg-gradient-to-br from-[#0054A6] via-[#1E6CCD] to-[#69A3FF] 
+                                  text-white shadow"
+                  >
                     <GraduationCap className="h-5 w-5" />
                   </div>
                   <CardTitle className="text-lg">
@@ -137,7 +142,11 @@ export default function HSEPage() {
 
               <Card className="border-brand-blue/10 bg-white/85 backdrop-blur-sm shadow-sm">
                 <CardHeader className="flex flex-row items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-brand-yellow via-brand-green to-brand-blue text-slate-900 shadow">
+                  <div
+                    className="flex h-10 w-10 items-center justify-center rounded-full 
+                                  bg-gradient-to-br from-[#0054A6] via-[#1E6CCD] to-[#69A3FF] 
+                                  text-white shadow"
+                  >
                     <ClipboardCheck className="h-5 w-5" />
                   </div>
                   <CardTitle className="text-lg">

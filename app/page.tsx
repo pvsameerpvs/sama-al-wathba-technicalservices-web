@@ -1,12 +1,9 @@
-import { InfoSection } from "@/components/Info-section";
-import { SectionWithCards } from "@/components/SectionWithCards";
 import { HeroSlider } from "@/components/hero-slider";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import ServicesPage from "./services/page";
 import { WhyChooseUsSection } from "@/components/why-choose-us";
 import { OrganizationalStructure } from "@/components/organizational-structure";
 import { ProjectsGrid } from "@/components/projects/projects-grid";
-import { MissionVisionSection } from "@/components/mission-vision-section";
+import { InfoSection } from "@/components/Info-section";
 
 export default function HomePage() {
   const homeFeatures = [

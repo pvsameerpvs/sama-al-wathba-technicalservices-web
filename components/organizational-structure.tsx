@@ -16,7 +16,7 @@ function SvgNode({ x, y, label }: NodeProps) {
 
   return (
     <g transform={`translate(${x}, ${y})`} filter="url(#nodeShadow)">
-      {/* BACK red card */}
+      {/* BACK card - brand blue */}
       <rect
         x={0}
         y={0}
@@ -24,11 +24,11 @@ function SvgNode({ x, y, label }: NodeProps) {
         height={height}
         rx={radius}
         ry={radius}
-        fill="#b91c1c"
-        opacity={0.95}
+        fill="#0054A6"
+        opacity={0.97}
       />
 
-      {/* FRONT white card */}
+      {/* FRONT white card with blue stroke */}
       <rect
         x={6}
         y={6}
@@ -37,7 +37,7 @@ function SvgNode({ x, y, label }: NodeProps) {
         rx={radius}
         ry={radius}
         fill="white"
-        stroke="#b91c1c"
+        stroke="#0054A6"
         strokeWidth={1.5}
       />
 
@@ -71,15 +71,15 @@ export function OrganizationalStructure({ className }: { className?: string }) {
       {/* TOP CENTER BLOB */}
       <div
         className="pointer-events-none absolute -top-10 left-1/2 h-[430px] w-[430px]
-    -translate-x-1/2 rounded-full blur-[130px] opacity-25 
-    bg-gradient-to-br from-brand-yellow via-brand-green to-brand-blue"
+          -translate-x-1/2 rounded-full blur-[130px] opacity-25 
+          bg-gradient-to-br from-brand-yellow via-brand-green to-brand-blue"
       />
 
       {/* RIGHT SIDE BLOB */}
       <div
         className="pointer-events-none absolute top-1/2 right-0 h-[350px] w-[350px]
-    translate-y-[-40%] blur-[160px] opacity-20 
-    bg-gradient-to-tr from-brand-blue via-brand-green to-brand-yellow"
+          translate-y-[-40%] blur-[160px] opacity-20 
+          bg-gradient-to-tr from-brand-blue via-brand-green to-brand-yellow"
       />
 
       <div className="relative z-10 mx-auto max-w-6xl px-4">
@@ -87,10 +87,11 @@ export function OrganizationalStructure({ className }: { className?: string }) {
           <p className="text-xs tracking-[0.25em] text-brand-blue/80 uppercase">
             Company Hierarchy
           </p>
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-[0.25em] uppercase ">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-[0.25em] uppercase">
             ORGANIZATIONAL STRUCTURE
           </h2>
-          <div className="mx-auto h-[2px] w-24 bg-gradient-to-r from-brand-yellow via-brand-green to-brand-blue" />
+          <div className="mx-auto h-[2px] w-24 bg-gradient-to-r from-[#003F7F] via-[#0054A6] to-[#2A75C5]" />
+
           <p className="max-w-2xl mx-auto text-sm md:text-base text-slate-700">
             A clear representation of each department’s reporting structure.
           </p>
@@ -133,8 +134,8 @@ export function OrganizationalStructure({ className }: { className?: string }) {
                 </filter>
               </defs>
 
-              {/* === CONNECTOR LINES (RED) === */}
-              <g stroke="#b91c1c" strokeWidth="2" strokeLinecap="round">
+              {/* === CONNECTOR LINES – BRAND BLUE === */}
+              <g stroke="#0054A6" strokeWidth="2" strokeLinecap="round">
                 {/* MD → horizontal */}
                 <line x1="486" y1="100" x2="486" y2="140" />
                 <line x1="151" y1="140" x2="691" y2="140" />
@@ -201,9 +202,9 @@ export function OrganizationalStructure({ className }: { className?: string }) {
           </div>
 
           {/* Small legend/footer */}
-          <div className="border-t border-red-50 px-4 py-3 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-500">
+          <div className="border-t border-brand-blue/10 px-4 py-3 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-500">
             <span>
-              <span className="inline-block h-3 w-3 rounded-md bg-red-700 align-middle mr-1" />
+              <span className="inline-block h-3 w-3 rounded-md bg-[#0054A6] align-middle mr-1" />
               Reporting line from top management to site execution team.
             </span>
             <span className="italic">

@@ -39,7 +39,7 @@ export function WhyChooseUsSection({ className }: WhyChooseUsSectionProps) {
         {/* Left side – image */}
         <div className="relative h-72 w-full overflow-hidden rounded-3xl border border-slate-200 bg-slate-900/80 shadow-lg">
           <Image
-            src="/project team.jpeg" // put your best team / project image in public/why-choose-us.jpg
+            src="/project team.jpeg" // put your best team / project image in public/
             alt="Sama Al Wathba project team"
             fill
             className="object-cover object-center"
@@ -78,7 +78,14 @@ export function WhyChooseUsSection({ className }: WhyChooseUsSectionProps) {
                   className="border-slate-200/80 bg-white/85 backdrop-blur-sm shadow-sm hover:shadow-md transition-shadow"
                 >
                   <CardHeader className="flex flex-row items-center gap-3 pb-2">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-tr from-brand-yellow/80 via-brand-green/70 to-brand-blue/80 text-slate-900 shadow-sm">
+                    {/* Brand blue gradient icon circle */}
+                    <div
+                      className="
+                        flex h-9 w-9 items-center justify-center rounded-full
+                        bg-gradient-to-br from-[#0054A6] via-[#1E6CCD] to-[#69A3FF]
+                        text-white shadow-sm
+                      "
+                    >
                       <Icon className="h-4 w-4" />
                     </div>
                     <CardTitle className="text-sm md:text-[15px]">

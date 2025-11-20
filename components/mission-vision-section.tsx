@@ -2,11 +2,13 @@
 
 import Image from "next/image";
 import { Target, Leaf, Users, TrendingUp } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/components/ui/utils";
 
 export function MissionVisionSection({ className }: { className?: string }) {
   return (
-    <section className={cn("section space-y-10   ", className)}>
+    <section className={cn("section space-y-10", className)}>
       <div className="grid gap-10 items-start md:grid-cols-[minmax(0,1.3fr)_minmax(0,1.1fr)]">
         {/* Left – Mission & Values text */}
         <div className="space-y-8">
@@ -45,7 +47,11 @@ export function MissionVisionSection({ className }: { className?: string }) {
 
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-slate-200 bg-slate-50/70 p-4">
-              <div className="mb-2 inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-brand-yellow via-brand-green to-brand-blue text-slate-900 shadow-sm">
+              <div
+                className="mb-2 inline-flex h-9 w-9 items-center justify-center rounded-full 
+                bg-gradient-to-br from-[#0054A6] via-[#1E6CCD] to-[#69A3FF] 
+                text-white shadow-sm"
+              >
                 <Target className="h-4 w-4" />
               </div>
               <h3 className="text-sm font-semibold text-slate-900">
@@ -57,7 +63,11 @@ export function MissionVisionSection({ className }: { className?: string }) {
               </p>
             </div>
             <div className="rounded-2xl border border-slate-200 bg-slate-50/70 p-4">
-              <div className="mb-2 inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-brand-yellow via-brand-green to-brand-blue text-slate-900 shadow-sm">
+              <div
+                className="mb-2 inline-flex h-9 w-9 items-center justify-center rounded-full 
+                bg-gradient-to-br from-[#0054A6] via-[#1E6CCD] to-[#69A3FF] 
+                text-white shadow-sm"
+              >
                 <Users className="h-4 w-4" />
               </div>
               <h3 className="text-sm font-semibold text-slate-900">
@@ -68,6 +78,18 @@ export function MissionVisionSection({ className }: { className?: string }) {
                 our clients.
               </p>
             </div>
+          </div>
+
+          {/* CTA button under mission cards */}
+          <div className="pt-2">
+            <Button
+              asChild
+              size="lg"
+              className="bg-gradient-to-r from-[#0054A6] via-[#1E6CCD] to-[#69A3FF] 
+                         hover:brightness-110 text-white font-semibold rounded-full shadow-lg"
+            >
+              <Link href="/contact">Request a Quote</Link>
+            </Button>
           </div>
         </div>
 
@@ -84,9 +106,14 @@ export function MissionVisionSection({ className }: { className?: string }) {
 
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-slate-200 bg-slate-50/80 p-4">
-              <div className="mb-2 inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-brand-yellow via-brand-green to-brand-blue text-slate-900 shadow-sm">
+              <div
+                className="mb-2 inline-flex h-9 w-9 items-center justify-center rounded-full 
+                bg-gradient-to-br from-[#0054A6] via-[#1E6CCD] to-[#69A3FF] 
+                text-white shadow-sm"
+              >
                 <Leaf className="h-4 w-4" />
               </div>
+
               <h3 className="text-sm font-semibold text-slate-900">We Care</h3>
               <p className="mt-1 text-xs text-slate-600">
                 We operate safely and sustainably for our people, our business,
@@ -94,7 +121,11 @@ export function MissionVisionSection({ className }: { className?: string }) {
               </p>
             </div>
             <div className="rounded-2xl border border-slate-200 bg-slate-50/80 p-4">
-              <div className="mb-2 inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-brand-yellow via-brand-green to-brand-blue text-slate-900 shadow-sm">
+              <div
+                className="mb-2 inline-flex h-9 w-9 items-center justify-center rounded-full 
+                bg-gradient-to-br from-[#0054A6] via-[#1E6CCD] to-[#69A3FF] 
+                text-white shadow-sm"
+              >
                 <TrendingUp className="h-4 w-4" />
               </div>
               <h3 className="text-sm font-semibold text-slate-900">
@@ -112,7 +143,7 @@ export function MissionVisionSection({ className }: { className?: string }) {
             {/* Main image */}
             <div className="absolute inset-y-0 right-0 w-[72%] overflow-hidden rounded-3xl border border-slate-200 bg-slate-900/80">
               <Image
-                src="/team-work.jpeg" // replace with your real image
+                src="/team-work.jpeg"
                 alt="Sama Al Wathba team at work"
                 fill
                 className="object-cover"
@@ -123,7 +154,7 @@ export function MissionVisionSection({ className }: { className?: string }) {
             {/* Small overlay image */}
             <div className="absolute left-0 bottom-0 h-32 w-40 overflow-hidden rounded-2xl border border-white/70 bg-slate-900 shadow-lg">
               <Image
-                src="/Project site.jpeg" // replace with your real image
+                src="/Project site.jpeg"
                 alt="Project site"
                 fill
                 className="object-cover"

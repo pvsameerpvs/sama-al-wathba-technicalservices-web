@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone, MapPin, Building2 } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -9,12 +9,12 @@ export default function ContactPage() {
       <div
         className="pointer-events-none absolute -top-32 left-1/2 h-[480px] w-[480px]
         -translate-x-1/2 rounded-full blur-[150px] opacity-30
-        bg-gradient-to-br from-brand-yellow via-brand-green to-brand-blue"
+        bg-gradient-to-br from-[#0054A6] via-[#1E6CCD] to-[#69A3FF]"
       />
       <div
         className="pointer-events-none absolute top-1/2 right-0 h-[350px] w-[350px]
         -translate-y-1/2 blur-[160px] opacity-20
-        bg-gradient-to-tr from-brand-blue via-brand-green to-brand-yellow"
+        bg-gradient-to-tr from-[#69A3FF] via-[#1E6CCD] to-[#0054A6]"
       />
 
       {/* Header */}
@@ -43,7 +43,7 @@ export default function ContactPage() {
               <input
                 type="text"
                 className="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm
-                bg-white outline-none focus:ring-2 focus:ring-brand-blue"
+                bg-white outline-none focus:ring-2 focus:ring-[#1E6CCD]"
                 placeholder="Your full name"
               />
             </div>
@@ -55,7 +55,7 @@ export default function ContactPage() {
               <input
                 type="text"
                 className="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm
-                bg-white outline-none focus:ring-2 focus:ring-brand-blue"
+                bg-white outline-none focus:ring-2 focus:ring-[#1E6CCD]"
                 placeholder="Company name"
               />
             </div>
@@ -69,7 +69,7 @@ export default function ContactPage() {
               <input
                 type="email"
                 className="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm
-                bg-white outline-none focus:ring-2 focus:ring-brand-blue"
+                bg-white outline-none focus:ring-2 focus:ring-[#1E6CCD]"
                 placeholder="name@example.com"
               />
             </div>
@@ -81,7 +81,7 @@ export default function ContactPage() {
               <input
                 type="tel"
                 className="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm
-                bg-white outline-none focus:ring-2 focus:ring-brand-blue"
+                bg-white outline-none focus:ring-2 focus:ring-[#1E6CCD]"
                 placeholder="+971 ..."
               />
             </div>
@@ -93,7 +93,7 @@ export default function ContactPage() {
             </label>
             <select
               className="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm
-              bg-white outline-none focus:ring-2 focus:ring-brand-blue"
+              bg-white outline-none focus:ring-2 focus:ring-[#1E6CCD]"
             >
               <option>Interior Fit-Out</option>
               <option>Facility Management</option>
@@ -110,7 +110,7 @@ export default function ContactPage() {
             <textarea
               rows={4}
               className="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm
-              bg-white outline-none focus:ring-2 focus:ring-brand-blue"
+              bg-white outline-none focus:ring-2 focus:ring-[#1E6CCD]"
               placeholder="Tell us briefly about your project, location, and timeline."
             />
           </div>
@@ -119,9 +119,9 @@ export default function ContactPage() {
           <button
             type="submit"
             className="inline-flex w-full items-center justify-center rounded-full
-            bg-gradient-to-r from-brand-yellow via-brand-green to-brand-blue
-            px-5 py-2.5 text-sm font-semibold text-slate-900 shadow-md
-            hover:brightness-105 transition"
+            bg-gradient-to-r from-[#0054A6] via-[#1E6CCD] to-[#69A3FF]
+            px-5 py-2.5 text-sm font-semibold text-white shadow-md
+            hover:brightness-110 transition"
           >
             Submit Enquiry
           </button>
@@ -140,7 +140,7 @@ export default function ContactPage() {
             backdrop-blur-sm space-y-3"
           >
             <h2 className="text-sm font-semibold text-slate-900 flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-brand-blue" />
+              <MapPin className="h-4 w-4 text-[#0054A6]" />
               Office Address
             </h2>
             <p className="text-sm text-slate-700">PO Box 2821</p>
@@ -154,14 +154,14 @@ export default function ContactPage() {
             backdrop-blur-sm space-y-3"
           >
             <h2 className="text-sm font-semibold text-slate-900 flex items-center gap-2">
-              <Phone className="h-4 w-4 text-brand-blue" />
+              <Phone className="h-4 w-4 text-[#0054A6]" />
               Contact Details
             </h2>
             <p className="text-sm">Mob: +971 55 433 8371</p>
             <p className="text-sm">Mob: +971 56 897 1268</p>
 
             <h2 className="text-sm font-semibold mt-4 text-slate-900 flex items-center gap-2">
-              <Mail className="h-4 w-4 text-brand-blue" />
+              <Mail className="h-4 w-4 text-[#0054A6]" />
               Email
             </h2>
             <p className="text-sm">lg.samaalwathbi@hotmail.com</p>

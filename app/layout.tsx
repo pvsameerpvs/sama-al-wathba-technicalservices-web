@@ -12,11 +12,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen flex flex-col bg-slate-50 text-slate-900">
-        <Navbar />
-        <main className="flex-1 pt-">{children}</main>
-        <Footer />
+    <html lang="en" className="h-full overflow-x-hidden">
+      <body className="min-h-screen bg-slate-50 text-slate-900 overflow-x-hidden">
+        {/* Global layout wrapper */}
+        <div className="flex min-h-screen flex-col overflow-x-hidden">
+          <Navbar />
+
+          {/* Reserve space for fixed navbar */}
+          <main className="flex-1 w-full pt-16 md:pt-20 overflow-x-hidden">
+            {children}
+          </main>
+
+          <Footer />
+        </div>
       </body>
     </html>
   );

@@ -16,13 +16,6 @@ export function Footer() {
     <footer className="relative mt-16 border-t border-brand-blue/25 bg-slate-950 text-slate-100">
       {/* Background image + overlays */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        {/* Background image – change path if needed */}
-        <Image
-          src="/footer-bg.jpg"
-          alt=""
-          fill
-          className="object-cover opacity-35"
-        />
         {/* Dark gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/95 to-slate-900/80" />
         {/* Brand color blob */}
@@ -38,24 +31,23 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))]">
           {/* Brand / intro */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="relative h-11 w-11 overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-brand-blue/40">
+            <Link href="/" className="flex flex-1 min-w-0 items-center">
+              <div
+                className="relative 
+      h-20 w-56          /* mobile bigger */
+      sm:h-24 sm:w-64    /* tablet bigger */
+      md:h-24 md:w-60    /* desktop same */
+    "
+              >
                 <Image
-                  src="/logo-primary.jpeg"
+                  src="/logo-primary-footer.png"
                   alt="Sama Al Wathba logo"
                   fill
-                  className="object-contain p-1.5"
+                  className="object-contain"
+                  priority
                 />
               </div>
-              <div className="flex flex-col">
-                <span className="text-sm font-semibold tracking-tight text-white">
-                  Sama Al Wathba
-                </span>
-                <span className="text-[11px] uppercase tracking-[0.18em] text-slate-300">
-                  Technical Services L.L.C
-                </span>
-              </div>
-            </div>
+            </Link>
 
             <p className="max-w-md text-sm text-slate-300">
               Interior fit-out, technical services and facility maintenance

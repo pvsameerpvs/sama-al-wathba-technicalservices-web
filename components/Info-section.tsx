@@ -102,9 +102,15 @@ export function InfoSection({
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-3 pt-2">
-            <Button asChild size="lg">
+            <Button
+              asChild
+              size="lg"
+              className="bg-gradient-to-r from-[#0054A6] via-[#1E6CCD] to-[#69A3FF] 
+             hover:brightness-110 text-white font-semibold rounded-full shadow-lg"
+            >
               <Link href="/contact">Request a Quote</Link>
             </Button>
+
             <Button
               asChild
               size="lg"
