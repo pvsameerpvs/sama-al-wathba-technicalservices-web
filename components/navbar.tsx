@@ -28,8 +28,7 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-40 overflow-x-hidden",
-        // header color based on logo blue
+        "fixed inset-x-0 top-0 z-40",
         "border-b border-[#0054A6]/20",
         "bg-gradient-to-r from-white/95 via-[#F3F6FF]/95 to-[#DCE7FF]/95",
         "backdrop-blur-xl"
@@ -37,9 +36,9 @@ export function Navbar() {
     >
       {/* Top bar */}
       <div className="relative z-10 mx-auto flex h-16 md:h-20 w-full max-w-6xl items-center justify-between gap-3 px-3 sm:px-6">
-        {/* Logo + name */}
-        <Link href="/" className="flex flex-1 min-w-0 items-center">
-          <div className="relative h-16 w-44 sm:h-20 sm:w-52 md:h-24 md:w-60">
+        {/* Logo */}
+        <Link href="/" className="flex min-w-0 items-center">
+          <div className="relative h-14 w-44 sm:h-16 sm:w-52 md:h-20 md:w-60">
             <Image
               src="/logo-primary.png"
               alt="Sama Al Wathba logo"
@@ -50,7 +49,7 @@ export function Navbar() {
           </div>
         </Link>
 
-        {/* Desktop / large screen nav */}
+        {/* Desktop nav */}
         <nav className="hidden items-center gap-5 lg:flex">
           {navItems.map((item) => {
             const active = pathname === item.href;
@@ -81,7 +80,7 @@ export function Navbar() {
           })}
         </nav>
 
-        {/* Desktop buttons (large screens only) */}
+        {/* Desktop buttons */}
         <div className="hidden items-center gap-2 lg:flex">
           <Button
             asChild
@@ -105,7 +104,7 @@ export function Navbar() {
           </Button>
         </div>
 
-        {/* Mobile / tablet top-right: call + menu */}
+        {/* Mobile top-right */}
         <div className="flex items-center gap-2 lg:hidden">
           <Button
             asChild
@@ -130,7 +129,7 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile / tablet dropdown menu */}
+      {/* Mobile dropdown */}
       {open && (
         <div className="lg:hidden border-t border-[#0054A6]/20 bg-white/98 backdrop-blur-xl">
           <div className="mx-auto flex max-w-6xl flex-col gap-1 px-3 sm:px-6 py-3">
