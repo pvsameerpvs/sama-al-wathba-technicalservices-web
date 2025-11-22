@@ -10,19 +10,20 @@ const slides = [
     title: "Interior Fit-Out & Technical Services",
     subtitle:
       "Complete turnkey solutions for offices, clinics, retail, and hospitality spaces across the UAE.",
-    image: "/hero-1.jpg",
+    image: "/tank.jpg",
   },
   {
     title: "Facility Management & Maintenance",
     subtitle:
       "Reliable, responsive teams to keep your assets safe, efficient, and always presentable.",
-    image: "/hero-2.jpg",
+    image: "/landscapping.jpg",
   },
   {
     title: "Smart Access & Automation",
     subtitle:
       "Automatic doors, access control, and hotel smart locks tailored for modern properties.",
-    image: "/hero-3.jpg",
+
+    image: "/hero-2.jpg",
   },
 ];
 

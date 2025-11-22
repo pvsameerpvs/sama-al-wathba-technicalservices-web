@@ -144,8 +144,10 @@ export default function ContactPage() {
               Office Address
             </h2>
             <p className="text-sm text-slate-700">PO Box 2821</p>
-            <p className="text-sm text-slate-700">Empire Heights Tower</p>
-            <p className="text-sm text-slate-700">Business Bay, Dubai, UAE</p>
+            <p className="text-sm text-slate-700">
+              E901-44 IRIS Tower Bay Center
+            </p>
+            <p className="text-sm text-slate-700"> Dubai, UAE</p>
           </div>
 
           {/* Contact */}

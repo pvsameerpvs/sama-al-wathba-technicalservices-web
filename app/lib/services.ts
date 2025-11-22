@@ -186,7 +186,7 @@ export const services: Service[] = [
       "Post-construction and periodic cleaning for safe, presentable environments.",
     long:
       "Our teams perform post-construction cleaning, handover cleaning and periodic cleaning services to keep interiors and common areas clean and ready for use.",
-    image: "/Building Cleaning Services.jpeg",
+    image: "/Building Cleaning Services.jpg",
     highlights: [
       "Post-construction cleaning",
       "Handover & snag cleaning",
@@ -268,4 +268,52 @@ export const services: Service[] = [
       "Retrofit & new installations",
     ],
   },
+  {
+  id: "acDuctCleaning",
+  name: "AC Duct Cleaning",
+  category: "Core Service",
+  short:
+    "Professional cleaning of AC ducts to improve air quality and system efficiency.",
+  long:
+    "Our team provides thorough cleaning of air-conditioning ducts using specialized equipment to remove dust, allergens, mold and contaminants. This ensures cleaner airflow, improved cooling performance and a healthier indoor environment.",
+  image: "/acduct.jpg",
+  highlights: [
+    "Removal of dust & contaminants",
+    "Improved indoor air quality",
+    "Enhanced cooling efficiency",
+  ],
+}
+,
+{
+  id: "landscaping",
+  name: "Landscaping Works",
+  category: "Core Service",
+  short:
+    "Complete landscaping solutions for gardens, outdoor spaces and green areas.",
+  long:
+    "We provide professional landscaping services including softscape and hardscape works. Our team handles plant selection, lawn installation, irrigation setup, pathways, decorative features and ongoing garden maintenance to create functional and visually appealing outdoor environments.",
+  image: "/landscapping.jpg",
+  highlights: [
+    "Softscape & hardscape",
+    "Garden design & installation",
+    "Irrigation systems & maintenance",
+  ],
+}
+,
+{
+  id: "waterproofing",
+  name: "Waterproofing Works",
+  category: "Core Service",
+  short:
+    "Professional waterproofing solutions to protect structures from leaks and moisture.",
+  long:
+    "We provide comprehensive waterproofing services for roofs, wet areas, foundations and external walls. Our team uses advanced materials and methods to prevent water penetration, ensuring long-term durability and protection against moisture-related damage.",
+  image: "/landscaping.jpg",
+  highlights: [
+    "Roof & wet area waterproofing",
+    "Crack treatment & sealing",
+    "Membrane and coating systems",
+  ],
+}
+
 ];

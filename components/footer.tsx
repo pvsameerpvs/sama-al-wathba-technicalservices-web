@@ -139,14 +139,14 @@ export function Footer() {
               <p className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 text-brand-yellow" />
                 <span>
-                  Empire Heights Tower, Business Bay,
+                  E901-44 IRIS Tower Bay Center
                   <br />
                   Dubai, United Arab Emirates
                 </span>
               </p>
               <p className="flex items-center gap-2">
                 <PhoneCall className="h-4 w-4 text-brand-green" />
-                <span>+971 55 433 8371 / +971 56 897 1268</span>
+                <span>+971 504008440 / +971 569014678</span>
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-brand-blue" />
