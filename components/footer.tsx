@@ -154,7 +154,7 @@ export function Footer() {
                   href="mailto:lg.samaalwathbi@hotmail.com"
                   className="hover:text-brand-yellow underline underline-offset-2"
                 >
-                  lg.samaalwathbi@hotmail.com
+                  info.saw777@gmail.com
                 </Link>
               </p>
             </div>
@@ -191,16 +191,6 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/10 pt-4 mt-4 flex flex-col gap-2 text-[11px] text-slate-400 md:flex-row md:items-center md:justify-between">
-          <p>
-            © {year} Sama Al Wathba Technical Services L.L.C. All rights
-            reserved.
-          </p>
-          <p>
-            Licensed interior fit-out &amp; technical services contractor based
-            in Dubai, UAE.
-          </p>
-        </div>
       </div>
     </footer>
   );

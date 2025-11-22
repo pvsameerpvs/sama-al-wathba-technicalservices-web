@@ -166,7 +166,7 @@ export default function ContactPage() {
               <Mail className="h-4 w-4 text-[#0054A6]" />
               Email
             </h2>
-            <p className="text-sm">lg.samaalwathbi@hotmail.com</p>
+            <p className="text-sm">info.saw777@gmail.com</p>
           </div>
         </aside>
       </div>

@@ -23,7 +23,7 @@ const slides = [
     subtitle:
       "Automatic doors, access control, and hotel smart locks tailored for modern properties.",
 
-    image: "/hero-2.jpg",
+    image: "/smart2.JPG",
   },
 ];
 
