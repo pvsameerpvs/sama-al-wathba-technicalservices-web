@@ -190,7 +190,6 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
       </div>
     </footer>
   );
