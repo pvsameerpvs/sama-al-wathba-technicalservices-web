@@ -154,7 +154,7 @@ export function Footer() {
                   href="mailto:lg.samaalwathbi@hotmail.com"
                   className="hover:text-brand-yellow underline underline-offset-2"
                 >
-                  info.saw777@gmail.com
+                 info@samaalwathba.com
                 </Link>
               </p>
             </div>

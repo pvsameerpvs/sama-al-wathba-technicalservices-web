@@ -143,11 +143,12 @@ export default function ContactPage() {
               <MapPin className="h-4 w-4 text-[#0054A6]" />
               Office Address
             </h2>
-            <p className="text-sm text-slate-700">PO Box 2821</p>
+            <p className="text-sm text-slate-700">E901-44</p>
             <p className="text-sm text-slate-700">
-              E901-44 IRIS Tower Bay Center
+              IRIS Tower Bay Center
+
             </p>
-            <p className="text-sm text-slate-700"> Dubai, UAE</p>
+            <p className="text-sm text-slate-700">Dubai, United Arab Emirates</p>
           </div>
 
           {/* Contact */}
@@ -159,14 +160,14 @@ export default function ContactPage() {
               <Phone className="h-4 w-4 text-[#0054A6]" />
               Contact Details
             </h2>
-            <p className="text-sm">Mob: +971 55 433 8371</p>
-            <p className="text-sm">Mob: +971 56 897 1268</p>
+            <p className="text-sm">Mob: +971 504008440</p>
+            <p className="text-sm">Mob: +971 569014678</p>
 
             <h2 className="text-sm font-semibold mt-4 text-slate-900 flex items-center gap-2">
               <Mail className="h-4 w-4 text-[#0054A6]" />
               Email
             </h2>
-            <p className="text-sm">info.saw777@gmail.com</p>
+            <p className="text-sm">info@samaalwathba.com</p>
           </div>
         </aside>
       </div>
