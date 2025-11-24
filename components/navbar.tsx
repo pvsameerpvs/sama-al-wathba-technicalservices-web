@@ -88,7 +88,7 @@ export function Navbar() {
             variant="outline"
             className="rounded-full border-[#0054A6]/30 bg-white/90 text-xs font-semibold text-[#0054A6] hover:bg-white"
           >
-            <Link href="tel:+971554338371">
+            <Link href="tel:+971 569014678">
               <PhoneCall className="mr-1.5 h-4 w-4" />
               Call Us
             </Link>

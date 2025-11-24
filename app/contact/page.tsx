@@ -1,8 +1,61 @@
 "use client";
 
+import { useState } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 
+type Errors = {
+  name?: string;
+  email?: string;
+  mobile?: string;
+  details?: string;
+};
+
 export default function ContactPage() {
+  const [name, setName] = useState("");
+  const [company, setCompany] = useState("");
+  const [email, setEmail] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [service, setService] = useState("Interior Fit-Out");
+  const [details, setDetails] = useState("");
+  const [errors, setErrors] = useState<Errors>({});
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const newErrors: Errors = {};
+
+    if (!name.trim()) newErrors.name = "Name is required.";
+    if (!email.trim()) newErrors.email = "Email is required.";
+    if (!mobile.trim()) newErrors.mobile = "Mobile number is required.";
+    if (!details.trim()) newErrors.details = "Project details are required.";
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    // Clear errors if everything is valid
+    setErrors({});
+
+    const message = `
+New enquiry from website:
+
+Name: ${name}
+Company: ${company || "-"}
+Email: ${email}
+Mobile: ${mobile}
+Service Required: ${service}
+
+Project Details:
+${details}
+    `.trim();
+
+    const encoded = encodeURIComponent(message);
+    const url = `https://wa.me/971569014678?text=${encoded}`;
+
+    window.open(url, "_blank");
+  };
+
   return (
     <section className="relative section space-y-10 overflow-hidden">
       {/* Gradient background blobs */}
@@ -32,22 +85,33 @@ export default function ContactPage() {
       <div className="relative grid gap-10 md:grid-cols-[minmax(0,1.8fr)_minmax(0,1.2fr)]">
         {/* FORM CARD */}
         <form
+          onSubmit={handleSubmit}
           className="rounded-3xl border border-slate-200/70 bg-white/90
           shadow-lg backdrop-blur-sm p-8 space-y-6"
         >
           <div className="grid gap-6 md:grid-cols-2">
+            {/* Name */}
             <div className="space-y-1">
               <label className="text-xs font-semibold text-slate-700">
-                Name
+                Name <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
-                className="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm
-                bg-white outline-none focus:ring-2 focus:ring-[#1E6CCD]"
+                className={`w-full rounded-xl border px-3 py-2 text-sm bg-white outline-none focus:ring-2 ${
+                  errors.name
+                    ? "border-red-500 focus:ring-red-500"
+                    : "border-slate-300 focus:ring-[#1E6CCD]"
+                }`}
                 placeholder="Your full name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
+              {errors.name && (
+                <p className="text-[11px] text-red-500">{errors.name}</p>
+              )}
             </div>
 
+            {/* Company */}
             <div className="space-y-1">
               <label className="text-xs font-semibold text-slate-700">
                 Company
@@ -57,36 +121,57 @@ export default function ContactPage() {
                 className="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm
                 bg-white outline-none focus:ring-2 focus:ring-[#1E6CCD]"
                 placeholder="Company name"
+                value={company}
+                onChange={(e) => setCompany(e.target.value)}
               />
             </div>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
+            {/* Email */}
             <div className="space-y-1">
               <label className="text-xs font-semibold text-slate-700">
-                Email
+                Email <span className="text-red-500">*</span>
               </label>
               <input
                 type="email"
-                className="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm
-                bg-white outline-none focus:ring-2 focus:ring-[#1E6CCD]"
+                className={`w-full rounded-xl border px-3 py-2 text-sm bg-white outline-none focus:ring-2 ${
+                  errors.email
+                    ? "border-red-500 focus:ring-red-500"
+                    : "border-slate-300 focus:ring-[#1E6CCD]"
+                }`}
                 placeholder="name@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
+              {errors.email && (
+                <p className="text-[11px] text-red-500">{errors.email}</p>
+              )}
             </div>
 
+            {/* Mobile */}
             <div className="space-y-1">
               <label className="text-xs font-semibold text-slate-700">
-                Mobile
+                Mobile <span className="text-red-500">*</span>
               </label>
               <input
                 type="tel"
-                className="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm
-                bg-white outline-none focus:ring-2 focus:ring-[#1E6CCD]"
+                className={`w-full rounded-xl border px-3 py-2 text-sm bg-white outline-none focus:ring-2 ${
+                  errors.mobile
+                    ? "border-red-500 focus:ring-red-500"
+                    : "border-slate-300 focus:ring-[#1E6CCD]"
+                }`}
                 placeholder="+971 ..."
+                value={mobile}
+                onChange={(e) => setMobile(e.target.value)}
               />
+              {errors.mobile && (
+                <p className="text-[11px] text-red-500">{errors.mobile}</p>
+              )}
             </div>
           </div>
 
+          {/* Service Required */}
           <div className="space-y-1">
             <label className="text-xs font-semibold text-slate-700">
               Service Required
@@ -94,6 +179,8 @@ export default function ContactPage() {
             <select
               className="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm
               bg-white outline-none focus:ring-2 focus:ring-[#1E6CCD]"
+              value={service}
+              onChange={(e) => setService(e.target.value)}
             >
               <option>Interior Fit-Out</option>
               <option>Facility Management</option>
@@ -103,16 +190,25 @@ export default function ContactPage() {
             </select>
           </div>
 
+          {/* Project Details */}
           <div className="space-y-1">
             <label className="text-xs font-semibold text-slate-700">
-              Project Details
+              Project Details <span className="text-red-500">*</span>
             </label>
             <textarea
               rows={4}
-              className="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm
-              bg-white outline-none focus:ring-2 focus:ring-[#1E6CCD]"
+              className={`w-full rounded-xl border px-3 py-2 text-sm bg-white outline-none focus:ring-2 ${
+                errors.details
+                  ? "border-red-500 focus:ring-red-500"
+                  : "border-slate-300 focus:ring-[#1E6CCD]"
+              }`}
               placeholder="Tell us briefly about your project, location, and timeline."
+              value={details}
+              onChange={(e) => setDetails(e.target.value)}
             />
+            {errors.details && (
+              <p className="text-[11px] text-red-500">{errors.details}</p>
+            )}
           </div>
 
           {/* Submit */}
@@ -144,11 +240,10 @@ export default function ContactPage() {
               Office Address
             </h2>
             <p className="text-sm text-slate-700">E901-44</p>
+            <p className="text-sm text-slate-700">IRIS Tower Bay Center</p>
             <p className="text-sm text-slate-700">
-              IRIS Tower Bay Center
-
+              Dubai, United Arab Emirates
             </p>
-            <p className="text-sm text-slate-700">Dubai, United Arab Emirates</p>
           </div>
 
           {/* Contact */}
