@@ -10,7 +10,7 @@ const slides = [
     title: "Interior Fit-Out & Technical Services",
     subtitle:
       "Complete turnkey solutions for offices, clinics, retail, and hospitality spaces across the UAE.",
-    image: "/tank.jpg",
+    image: "/tank.png",
   },
   {
     title: "Facility Management & Maintenance",
