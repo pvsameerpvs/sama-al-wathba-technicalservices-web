@@ -139,7 +139,7 @@ export function Footer() {
               <p className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 text-brand-yellow" />
                 <span>
-                  E901-44 IRIS Tower Bay Center
+                  901-44 IRIS TOWER BUSINESS BAY, DUBAI
                   <br />
                   Dubai, United Arab Emirates
                 </span>
@@ -154,7 +154,7 @@ export function Footer() {
                   href="mailto:lg.samaalwathbi@hotmail.com"
                   className="hover:text-brand-yellow underline underline-offset-2"
                 >
-                 info@samaalwathba.com
+                  info@samaalwathba.com
                 </Link>
               </p>
             </div>
@@ -189,7 +189,6 @@ export function Footer() {
             </div>
           </div>
         </div>
-
       </div>
     </footer>
   );

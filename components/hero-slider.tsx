@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const slides = [
   {
-    title: "Interior Fit-Out & Technical Services",
+    title: "Water Tank Cleaning & Technical Services",
     subtitle:
       "Complete turnkey solutions for offices, clinics, retail, and hospitality spaces across the UAE.",
     image: "/tank-2.png",
